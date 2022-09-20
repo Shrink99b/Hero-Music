@@ -8,6 +8,7 @@ from Hero.core.call import Veer
 from Hero.utils.database import set_loop
 from Hero.utils.decorators import AdminRightsCheck
 
+
 # Commands
 STOP_COMMAND = get_command("STOP_COMMAND")
 

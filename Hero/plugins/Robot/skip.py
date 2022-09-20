@@ -14,6 +14,7 @@ from Hero.utils.inline.play import (stream_markup,
 from Hero.utils.stream.autoclear import auto_clean
 from Hero.utils.thumbnails import gen_thumb
 
+
 # Commands
 SKIP_COMMAND = get_command("SKIP_COMMAND")
 
