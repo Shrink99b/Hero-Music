@@ -8,6 +8,7 @@ GSTATS_COMMAND : ["gstats", "globalstats"]
 STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lang", "lan", "language"]
 
+VARS_COMMAND : ["vars"]
 
 # Play Commands
 
