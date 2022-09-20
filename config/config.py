@@ -11,20 +11,15 @@ if os.path.exists("Internal"):
     load_dotenv("Internal")
 
 
+#------------------------- REQUIRED --------------------------#
+
 API_ID = int(getenv("API_ID"))
+
 API_HASH = getenv("API_HASH")
 
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI")
-
-DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "900")
-)
-
-SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "1800")
-)
 
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
 
@@ -34,14 +29,32 @@ OWNER_ID = list(
     map(int, getenv("OWNER_ID", "1323020756").split())
 )
 
+STRING1 = getenv("STRING_SESSION")
+
+#------------------------------------------------------------------------------#
+
+STRING2 = getenv("STRING_SESSION2")
+STRING3 = getenv("STRING_SESSION3")
+STRING4 = getenv("STRING_SESSION4")
+STRING5 = getenv("STRING_SESSION5")
+
+DURATION_LIMIT_MIN = int(
+    getenv("DURATION_LIMIT", "900")
+)
+
+SONG_DOWNLOAD_DURATION = int(
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "1800")
+)
+
+
+
+
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/Shailendra34/Hero-Music",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
-
-GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", "https://t.me/He_Ro_Bots")
@@ -51,20 +64,19 @@ SUPPORT_GROUP = getenv(
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
 
 AUTO_LEAVE_ASSISTANT_TIME = int(
-    getenv("ASSISTANT_LEAVE_TIME", "6000")
+    getenv("ASSISTANT_LEAVE_TIME", "10800")
 )
 
 AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", "True")
-
-PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
 
 YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
 
 TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "3"))
 
-GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/Shailendra34/Hero-Music")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/Shailendra34")
 
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
+
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
 VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "200"))
@@ -86,11 +98,6 @@ TG_VIDEO_FILESIZE_LIMIT = int(
 )
 # https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("STRING_SESSION", None)
-STRING2 = getenv("STRING_SESSION2", None)
-STRING3 = getenv("STRING_SESSION3", None)
-STRING4 = getenv("STRING_SESSION4", None)
-STRING5 = getenv("STRING_SESSION5", None)
 
 BANNED_USERS = filters.user()
 YTDOWNLOADER = 1
@@ -108,7 +115,7 @@ START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/10d2346fbe6a76
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "assets/Ping.jpeg",
+    "https://te.legra.ph/file/595084e5fcf831ae235fd.jpg",
 )
 
 PLAYLIST_IMG_URL = getenv(
