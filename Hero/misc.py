@@ -8,7 +8,6 @@ from .logging import LOGGER
 
 SUDOERS = filters.user()
 
-HAPP = None
 _boot_ = time.time()
 
 
