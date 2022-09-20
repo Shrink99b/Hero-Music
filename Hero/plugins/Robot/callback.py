@@ -19,6 +19,7 @@ from Hero.utils.inline.play import (panel_markup_1,
                                           stream_markup,
                                           telegram_markup)
 from Hero.utils.stream.autoclear import auto_clean
+from config import OWNER_ID, MUSIC_BOT_NAME
 from Hero.utils.thumbnails import gen_thumb
 
 wrong = {}
@@ -43,6 +44,52 @@ async def markup_panel(client, CallbackQuery: CallbackQuery, _):
         wrong[chat_id] = {}
     wrong[chat_id][CallbackQuery.message.message_id] = False
 
+@app.on_callback_query(
+    filters.regex("settings_helper") & ~BANNED_USERS
+)
+@languageCB
+async def settings_cb(client, CallbackQuery, _):
+    try:
+        await CallbackQuery.answer(_["set_cb_8"])
+    except:
+        pass
+    buttons = setting_markup(_)
+    return await CallbackQuery.edit_message_text(
+        _["setting_1"].format(
+            CallbackQuery.message.chat.title,
+            CallbackQuery.message.chat.id,
+        ),
+        reply_markup=InlineKeyboardMarkup(buttons),
+    )
+
+
+@app.on_callback_query(
+    filters.regex("settingsback_helper") & ~BANNED_USERS
+)
+@languageCB
+async def settings_back_markup(
+    client, CallbackQuery: CallbackQuery, _
+):
+    try:
+        await CallbackQuery.answer()
+    except:
+        pass
+    if CallbackQuery.message.chat.type == "private":
+        try:
+            await app.resolve_peer(OWNER_ID[0])
+            OWNER = OWNER_ID[0]
+        except:
+            OWNER = None
+        buttons = private_panel(_, app.username, OWNER)
+        return await CallbackQuery.edit_message_text(
+            _["start_2"].format(MUSIC_BOT_NAME),
+            reply_markup=InlineKeyboardMarkup(buttons),
+        )
+    else:
+        buttons = setting_markup(_)
+        return await CallbackQuery.edit_message_reply_markup(
+            reply_markup=InlineKeyboardMarkup(buttons)
+        )
 
 @app.on_callback_query(filters.regex("MainMarkup") & ~BANNED_USERS)
 @languageCB
