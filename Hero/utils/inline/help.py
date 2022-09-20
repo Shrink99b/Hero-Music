@@ -21,7 +21,7 @@ def help_pannel(_, START: Union[bool, int] = None):
             text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
         ),
     ]
-    mark = second if START else first
+    mark = first if START else second
     upl = InlineKeyboardMarkup(
         [
             [
