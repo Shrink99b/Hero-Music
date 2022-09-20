@@ -24,7 +24,7 @@ async def init():
         and not config.STRING5
     ):
         LOGGER("Hero").error(
-            "Atleast add a pyrogram string session"
+            "Atleast Add One Pyrogram V1.4 String Session"
         )
         return
     if (
