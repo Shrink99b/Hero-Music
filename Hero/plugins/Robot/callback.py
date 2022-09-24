@@ -21,6 +21,7 @@ from Hero.utils.inline.play import (panel_markup_1,
 from Hero.utils.stream.autoclear import auto_clean
 from config import OWNER_ID, MUSIC_BOT_NAME
 from Hero.utils.thumbnails import gen_thumb
+from Hero.utils.inline.start import private_panel
 
 wrong = {}
 
