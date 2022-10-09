@@ -1,10 +1,8 @@
 import asyncio
 import importlib
 import sys
-
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
-
 import config
 from config import BANNED_USERS
 from Hero import LOGGER, app, userbot
@@ -24,7 +22,7 @@ async def init():
         and not config.STRING5
     ):
         LOGGER("Hero").error(
-            "Atleast Add One Pyrogram V1.4 String Session"
+            "Atleast add a pyrogram string"
         )
         return
     if (
@@ -47,7 +45,7 @@ async def init():
     for all_module in ALL_MODULES:
         importlib.import_module("Hero.plugins" + all_module)
     LOGGER("Hero.plugins").info(
-        "Modules Imported Successfully."
+        "Modules Imported Successfully"
     )
     await userbot.start()
     await Veer.start()
@@ -57,7 +55,7 @@ async def init():
         )
     except NoActiveGroupCall:
         LOGGER("Hero").error(
-            "[ERROR] - \n\nFirstly Open Telegram And Turn On Voice Chat In Your Logger Group"
+            "[ERROR] - \n\nFirstly open telegram and turn on voice chat in Logger Group"
         )
         sys.exit()
     except:

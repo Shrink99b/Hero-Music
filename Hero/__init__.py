@@ -2,7 +2,7 @@ from Hero.core.bot import HeroBot
 from Hero.core.dir import dirr
 from Hero.core.git import git
 from Hero.core.userbot import Userbot
-from Hero.misc import dbb, sudo
+from Hero.misc import dbb, heroku, sudo
 from aiohttp import ClientSession
 
 from .logging import LOGGER
@@ -15,6 +15,9 @@ git()
 
 # Initialize Memory DB
 dbb()
+
+# Heroku APP
+heroku()
 
 # Load Sudo Users from DB
 sudo()
