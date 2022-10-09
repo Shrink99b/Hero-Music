@@ -1,17 +1,14 @@
 import re
-import os
 import sys
+import os
 from os import getenv
 from dotenv import load_dotenv
 from pyrogram import filters
 
 
-# For Local Deploy
 if os.path.exists("Internal"):
     load_dotenv("Internal")
 
-
-#------------------------- REQUIRED --------------------------#
 
 API_ID = int(getenv("API_ID"))
 
@@ -21,6 +18,14 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI")
 
+DURATION_LIMIT_MIN = int(
+    getenv("DURATION_LIMIT", "1800")
+)
+
+SONG_DOWNLOAD_DURATION = int(
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "1800")
+)
+
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
 
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "ʜᴇʀᴏ")
@@ -29,24 +34,9 @@ OWNER_ID = list(
     map(int, getenv("OWNER_ID", "1323020756").split())
 )
 
-STRING1 = getenv("STRING_SESSION")
+HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
-#------------------------------------------------------------------------------#
-
-STRING2 = getenv("STRING_SESSION2")
-STRING3 = getenv("STRING_SESSION3")
-STRING4 = getenv("STRING_SESSION4")
-STRING5 = getenv("STRING_SESSION5")
-
-DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "900")
-)
-
-SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "1800")
-)
-
-PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
@@ -64,33 +54,34 @@ SUPPORT_GROUP = getenv(
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
 
 AUTO_LEAVE_ASSISTANT_TIME = int(
-    getenv("ASSISTANT_LEAVE_TIME", "10800")
+    getenv("ASSISTANT_LEAVE_TIME", "20000")
 )
 
 AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", "True")
 
-YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
+PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
 
-TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "3"))
+YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "1"))
+
+TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "1"))
 
 GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/Shailendra34")
 
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
-
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
-VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "200"))
+VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "500"))
 
-SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "200"))
+SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "500"))
 
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "200"))
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "500"))
 
 CLEANMODE_DELETE_MINS = int(
-    getenv("CLEANMODE_MINS", "5")
+    getenv("CLEANMODE_MINS", "15")
 )
 
 TG_AUDIO_FILESIZE_LIMIT = int(
-    getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600")
+    getenv("TG_AUDIO_FILESIZE_LIMIT", "1073741824")
 )
 
 TG_VIDEO_FILESIZE_LIMIT = int(
@@ -98,6 +89,11 @@ TG_VIDEO_FILESIZE_LIMIT = int(
 )
 # https://www.gbmb.org/mb-to-bytes
 
+STRING1 = getenv("STRING_SESSION")
+STRING2 = getenv("STRING_SESSION2")
+STRING3 = getenv("STRING_SESSION3")
+STRING4 = getenv("STRING_SESSION4")
+STRING5 = getenv("STRING_SESSION5")
 
 BANNED_USERS = filters.user()
 YTDOWNLOADER = 1
@@ -111,11 +107,11 @@ clean = {}
 
 autoclean = []
 
-START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/10d2346fbe6a761621124.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/595084e5fcf831ae235fd.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://te.legra.ph/file/595084e5fcf831ae235fd.jpg",
+    "https://te.legra.ph/file/336acd415a964479f5f37.jpg",
 )
 
 PLAYLIST_IMG_URL = getenv(
