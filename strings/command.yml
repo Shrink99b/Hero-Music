@@ -3,12 +3,12 @@
 PING_COMMAND : ["ping", "alive"]
 START_COMMAND : ["start", "mstart"]
 HELP_COMMAND : ["help"]
+SETTINGS_COMMAND : ["settings", "setting"]
 RELOAD_COMMAND : ["admincache", "reload"]
 GSTATS_COMMAND : ["gstats", "globalstats"]
 STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lang", "lan", "language"]
 
-VARS_COMMAND : ["vars"]
 
 # Play Commands
 
@@ -33,6 +33,9 @@ LYRICS_COMMAND : ["lyrics", "lyric"]
 
 # Admin Commands
 
+AUTH_COMMAND : ["auth"]
+UNAUTH_COMMAND : ["unauth"]
+AUTHUSERS_COMMAND : ["authusers", "authlist"]
 PAUSE_COMMAND : ["pause", "cpause"]
 RESUME_COMMAND : ["resume", "cresume"]
 STOP_COMMAND : ["stop", "end", "cstop", "cend"]
@@ -40,20 +43,20 @@ SKIP_COMMAND : ["skip", "cskip"]
 SHUFFLE_COMMAND : ["shuffle", "cshuffle"]
 LOOP_COMMAND : ["loop", "cloop"]
 SEEK_COMMAND : ["seek", "cseek", "seekback", "cseekback"]
-RESTART_COMMAND : ["reboot"]
+RESTART_COMMAND : ["restart"]
 
 
 # Sudo Users Commaands
 
 # Sudo Command
 ADDSUDO_COMMAND : ["addsudo", "addrandi"]
-DELSUDO_COMMAND : ["delsudo", "rmsudo"]
-SUDOUSERS_COMMAND : ["sudolist", "listsudo", "sudo"]
+DELSUDO_COMMAND : ["delsudo", "rmsudo", "deletesudo"]
+SUDOUSERS_COMMAND : ["sudolist", "listsudo", "sudoers", "sudo"]
 
 
 #Broadcast 
 
-BROADCAST_COMMAND : ["broadcast", "gcast"]
+BROADCAST_COMMAND : ["broadcast"]
 
 
 #Blacklist chat
@@ -75,11 +78,35 @@ MAINTENANCE_COMMAND : ["maintenance"]
 LOGGER_COMMAND : ["logger"]
 
 
+#Heroku
+
+GETLOG_COMMAND : ["get_log", "logs", "getlog", "log"]
+GETVAR_COMMAND : ["get_var", "getvar"]
+DELVAR_COMMAND : ["del_var", "delvar"]
+SETVAR_COMMAND : ["set_var", "setvar", "addvar"]
+USAGE_COMMAND : ["usage"]
+VARS_COMMAND : ["vars", "config"]
+
+
 #Basic Bot Commands
 
 UPDATE_COMMAND : ["update", "gitpull"]
-REBOOT_COMMAND : ["restart"]
+REBOOT_COMMAND : ["reboot"]
 AUTOEND_COMMAND : ["autoend"]
+
+
+#Private Bot Mode
+
+AUTHORIZE_COMMAND : ["authorize"]
+UNAUTHORIZE_COMMAND : ["unauthorize"]
+AUTHORIZED_COMMAND : ["authorized"]
+
+
+#Block Users Command
+
+BLOCK_COMMAND : ["block"]
+UNBLOCK_COMMAND : ["unblock"]
+BLOCKED_COMMAND : ["blockedusers", "blocked", "blusers"]
 
 
 #SPEEDTEST
@@ -98,3 +125,4 @@ ACTIVEVIDEO_COMMAND : ["activevideo", "activevd"]
 GBAN_COMMAND : ["gban", "gandban", "globalban"]
 UNGBAN_COMMAND : ["ungban", "gandback", "globalunban"]
 GBANNED_COMMAND : ["gbannedusers", "gbanlist", "gbanned"]
+
