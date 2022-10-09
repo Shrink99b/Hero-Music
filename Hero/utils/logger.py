@@ -12,14 +12,14 @@ async def play_logs(message, streamtype):
         logger_text = f"""
 **{MUSIC_BOT_NAME} ᴩʟᴀʏ ʟᴏɢɢᴇʀ**
 
-**ᴄʜᴀᴛ:** {message.chat.title} [`{message.chat.id}`]
+**ᴄʜᴀᴛ:** {message.chat.title} 
+**ᴄʜᴀᴛ ɪᴅ:** `{message.chat.id}`
 **ᴜsᴇʀ:** {message.from_user.mention}
 **ᴜsᴇʀɴᴀᴍᴇ:** @{message.from_user.username}
 **ɪᴅ:** `{message.from_user.id}`
 **ᴄʜᴀᴛ ʟɪɴᴋ:** {chatusername}
 
 **sᴇᴀʀᴄʜᴇᴅ ғᴏʀ:** {message.text}
-
 **sᴛʀᴇᴀᴍ ᴛʏᴩᴇ:** {streamtype}"""
         if message.chat.id != LOG_GROUP_ID:
             try:
