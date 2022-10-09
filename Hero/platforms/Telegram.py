@@ -119,7 +119,7 @@ class TeleAPI:
                     [
                         [
                             InlineKeyboardButton(
-                                text="↻ ᴄᴀɴᴄᴇʟ ↺",
+                                text="ᴄᴀɴᴄᴇʟ 🗑",
                                 callback_data="stop_downloading",
                             ),
                         ]
