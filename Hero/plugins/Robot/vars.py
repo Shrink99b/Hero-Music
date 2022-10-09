@@ -3,6 +3,7 @@ import asyncio
 from pyrogram import filters
 
 import config
+from config import OWNER_ID
 from strings import get_command
 from Hero import app
 from Hero.misc import SUDOERS
