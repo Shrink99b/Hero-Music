@@ -4,10 +4,9 @@ import config
 from ..logging import LOGGER
 
 
-
 class HeroBot(Client):
     def __init__(self):
-        LOGGER(__name__).info(f"Starting Bot...")
+        LOGGER(__name__).info(f"Starting Bot")
         super().__init__(
             "HeroMusic",
             api_id=config.API_ID,
@@ -27,13 +26,13 @@ class HeroBot(Client):
         a = await self.get_chat_member(config.LOG_GROUP_ID, self.id)
         if a.status != "administrator":
             LOGGER(__name__).error(
-                "Please Promote Bot As Admin In Logger Group"
+                "Please promote Bot as Admin in Logger Group"
             )
             sys.exit()
-        LOGGER(__name__).info(f"MusicBot Started as {self.name}")
+        LOGGER(__name__).info(f"Music Bot Started as {self.name}")
         try:
             await self.send_message(
-                config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.id}`\n❄ ɴᴀᴍᴇ : {self.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.username}"
+                config.LOG_GROUP_ID, f"**{config.MUSIC_BOT_NAME} ᴍᴜsɪᴄ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ ✅**"
             )
         except:
             LOGGER(__name__).error(

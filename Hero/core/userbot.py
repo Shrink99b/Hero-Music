@@ -44,11 +44,12 @@ class Userbot(Client):
         )
 
     async def start(self):
-        LOGGER(__name__).info(f"Gettings Assistants Info...")
+        LOGGER(__name__).info(f"Gettings Assistants Info")
         if config.STRING1:
             await self.one.start()
             try:
                 await self.one.join_chat("yaaro_ki_yaarii")
+                await self.one.join_chat("AboutShailendra")
                 await self.one.join_chat("he_ro_bots")
             except:
                 pass
@@ -64,11 +65,11 @@ class Userbot(Client):
             else:
                 self.one.name = get_me.first_name
             LOGGER(__name__).info(
-                f"Assistant Started as {self.one.name}"
+                f"Assistant Started As {self.one.name}"
             )
             try:
                 await self.one.send_message(
-                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴏɴᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.one.id}`\n❄ ɴᴀᴍᴇ : {self.one.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.one.username}"
+                    config.LOG_GROUP_ID, f"**{config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴏɴᴇ sᴛᴀʀᴛᴇᴅ ✅**"
                 )
             except:
                 LOGGER(__name__).error(
@@ -79,6 +80,7 @@ class Userbot(Client):
             await self.two.start()
             try:
                 await self.two.join_chat("yaaro_ki_yaarii")
+                await self.two.join_chat("AboutShailendra")
                 await self.two.join_chat("he_ro_bots")
             except:
                 pass
@@ -95,7 +97,7 @@ class Userbot(Client):
                 self.two.name = get_me.first_name
             try:
                 await self.two.send_message(
-                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛᴡᴏ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.two.id}`\n❄ ɴᴀᴍᴇ : {self.two.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.two.username}"
+                    config.LOG_GROUP_ID, f"**{config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛᴡᴏ sᴛᴀʀᴛᴇᴅ ✅**"
                 )
             except:
                 LOGGER(__name__).error(
@@ -109,6 +111,7 @@ class Userbot(Client):
             await self.three.start()
             try:
                 await self.three.join_chat("yaaro_ki_yaarii")
+                await self.three.join_chat("AboutShailendra")
                 await self.three.join_chat("he_ro_bots")
             except:
                 pass
@@ -125,7 +128,7 @@ class Userbot(Client):
                 self.three.name = get_me.first_name
             try:
                 await self.three.send_message(
-                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛʜʀᴇᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.three.id}`\n❄ ɴᴀᴍᴇ : {self.three.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.three.username}"
+                    config.LOG_GROUP_ID, f"**{config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛʜʀᴇᴇ sᴛᴀʀᴛᴇᴅ ✅**"
                 )
             except:
                 LOGGER(__name__).error(
@@ -139,6 +142,7 @@ class Userbot(Client):
             await self.four.start()
             try:
                 await self.four.join_chat("yaaro_ki_yaarii")
+                await self.four.join_chat("AboutShailendra")
                 await self.four.join_chat("he_ro_bots")
             except:
                 pass
@@ -155,7 +159,7 @@ class Userbot(Client):
                 self.four.name = get_me.first_name
             try:
                 await self.four.send_message(
-                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ғᴏᴜʀ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.four.id}`\n❄ ɴᴀᴍᴇ : {self.four.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.four.username}"
+                    config.LOG_GROUP_ID, f"**{config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ғᴏᴜʀ sᴛᴀʀᴛᴇᴅ ✅**"
                 )
             except:
                 LOGGER(__name__).error(
@@ -169,6 +173,7 @@ class Userbot(Client):
             await self.five.start()
             try:
                 await self.five.join_chat("yaaro_ki_yaarii")
+                await self.five.join_chat("AboutShailendra")
                 await self.five.join_chat("he_ro_bots")
             except:
                 pass
@@ -185,7 +190,7 @@ class Userbot(Client):
                 self.five.name = get_me.first_name
             try:
                 await self.five.send_message(
-                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ғɪᴠᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.five.id}`\n❄ ɴᴀᴍᴇ : {self.five.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.five.username}"
+                    config.LOG_GROUP_ID, f"**{config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ғɪᴠᴇ sᴛᴀʀᴛᴇᴅ ✅"
                 )
             except:
                 LOGGER(__name__).error(
