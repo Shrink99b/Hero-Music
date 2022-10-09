@@ -10,25 +10,24 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="➕ Aᴅᴅ Mᴇ ➕",
+                text="➕ ᴀᴅᴅ ᴍᴇ ➕",
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ],
         [
             InlineKeyboardButton(
-                text="Hᴇʟᴩ",
+                text="ʜᴇʟᴩ",
                 callback_data="settings_back_helper",
             ),
             InlineKeyboardButton(
-                text="Uᴘᴅᴀᴛᴇs",
-                url=f"https://t.me/He_Ro_Bots",
+                text="sᴇᴛᴛɪɴɢs", callback_data="settings_helper"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="Oᴡɴᴇʀ", user_id=OWNER),
+                text="ᴏᴡɴᴇʀ", url=f"https://t.me/Shailendra34"),
             InlineKeyboardButton(
-                text="Sᴜᴩᴩᴏʀᴛ", url=f"{config.SUPPORT_GROUP}"
+                text="sᴜᴩᴩᴏʀᴛ", url=f"{config.SUPPORT_GROUP}"
             ),
         ],
      ]
@@ -39,23 +38,25 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="➕ Aᴅᴅ Mᴇ ➕",
+                text="➕ ᴀᴅᴅ ᴍᴇ ➕",
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="Hᴇʟᴩ", callback_data="settings_back_helper"
-            ),
-            InlineKeyboardButton(
-                text="Uᴘᴅᴀᴛᴇs", url="https://t.me/He_Ro_Bots"
+                text="ʜᴇʟᴩ", callback_data="settings_back_helper"
             ),
         ],
         [
-            InlineKeyboardButton(text="Oᴡɴᴇʀ", user_id=OWNER),
+            InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/He_Ro_Bots"),
             InlineKeyboardButton(
-                text="Sᴜᴩᴩᴏʀᴛ", url=f"{config.SUPPORT_GROUP}"
+                text="sᴜᴩᴩᴏʀᴛ", url=f"{config.SUPPORT_GROUP}"
             ),
+        ],
+        [
+            InlineKeyboardButton(
+                    text="ᴏᴡɴᴇʀ", url=f"https://t.me/Shailendra34"
+                )
         ],
      ]
     return buttons
