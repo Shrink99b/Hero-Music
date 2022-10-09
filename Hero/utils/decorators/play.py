@@ -69,7 +69,7 @@ def PlayWrapper(command):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
+                            text="ғɪx ᴛʜɪs ✅",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
