@@ -1,5 +1,5 @@
 {
-    "name": "Hᴇʀᴏ Mᴜsɪᴄ",
+    "name": "TDN MUSIC",
     "description": "A Telegram Music Player Bot, Written In Python With Pyrogram And Py-Tgcalls.",
     "logo": "https://te.legra.ph/file/0c5ac380c34c90932461d.jpg",
     "keywords": [
@@ -41,7 +41,7 @@
       },
       "OWNER_ID": {
         "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "",
+        "value": "5307865914",
         "required": true
       },
       "STRING_SESSION": {
@@ -66,12 +66,12 @@
       },
       "SUPPORT_GROUP": {
         "description": "Link of your support group ! Channel ki id mat daal dena bsdk.",
-        "value": "https://t.me/Yaaro_Ki_Yaarii",
+        "value": "https://t.me/THE_DRAGON_NETWORK_OFFICIAL",
         "required": false
       },
       "SUPPORT_CHANNEL": {
         "description": "Link of your telegram channel.",
-        "value": "https://t.me/He_Ro_Bots",
+        "value": "https://t.me/friends_masti_club_fmc",
         "required": false
       }
     },
