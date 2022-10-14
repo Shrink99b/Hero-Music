@@ -66,12 +66,12 @@
       },
       "SUPPORT_GROUP": {
         "description": "Link of your support group ! Channel ki id mat daal dena bsdk.",
-        "value": "https://t.me/THE_DRAGON_NETWORK_OFFICIAL",
+        "value": "https://t.me/friends_masti_club_fmc",
         "required": false
       },
       "SUPPORT_CHANNEL": {
         "description": "Link of your telegram channel.",
-        "value": "https://t.me/friends_masti_club_fmc",
+        "value": "https://t.me/THE_DRAGON_NETWORK_OFFICIAL",
         "required": false
       }
     },
